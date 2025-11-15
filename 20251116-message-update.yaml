@@ -1,0 +1,72 @@
+# Personalize {first_name}
+
+subject: "Find Your Dime update: getting you more matches, and $20 to $30 job opportunity"
+text: |
+  {name},
+
+  Been thinking about how to get you more matches and would love your input.
+
+  The website version is working great — people are matching and chatting — but the app won’t be in the App Stores for about 4 more weeks.
+
+  So I’m torn.  
+  Would you rather:
+  1. Start getting more people on the website version now (even though it’s just the website, which can turn people off and may hurt long term)?
+  2. Or wait for the App Stores?
+
+  If we go now, we could use a few people to help promote.  
+  – We can pay $20 (or $30?) for women to hand out flyers after Devo outside of Sugarbeast this week (Nov 18) or next week, should take less than an hour. Know anyone interested in that? If friends want to work together, we can probably do that.
+  – Or we could use help with social media — students who’d like to create posts and/or influence and get paid.
+
+  Thoughts? What do you wish?
+
+  – Greg  
+  FindYourDime.com
+
+  Why FindYourDime?
+  * Everyone takes Positive Consent training before matching.
+  * Unlimited free matches and you can see who likes you.
+  * The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  * We actually want to help you get into a better relationship.
+
+html: |
+  <p>
+  {name},
+  </p>
+
+  <p>
+  Been thinking about how to get you more matches and would love your input.
+  </p>
+
+  <p>
+  The website version is working great — people are matching and chatting — but the app won’t be in the App Stores for about 4 more weeks.
+  </p>
+
+  <p>
+  So I’m torn.  
+  <br/>Would you rather:
+  <br/>1. Start getting more people on the website version now (even though it’s just the website, which can turn people off and may hurt long term)?
+  <br/>2. Or wait for the App Stores?
+  </p>
+
+  <p>
+  If we go now, we could use a few people to help promote.  
+  <br/>– We can pay $20 (or $30?) for women to hand out flyers after Devo outside of Sugarbeast this week (Nov 18) or next week, should take less than an hour. Know anyone interested in that? If friends want to work together, we can probably do that.
+  <br/>– Or we could use help with social media — students who’d like to create posts and/or influence and get paid.
+  </p>
+
+  <p>
+  Thoughts? What do you wish?
+  </p>
+
+  <p>
+  – Greg  
+  <br/>FindYourDime.com
+  </p>
+
+  <p>
+  Why FindYourDime?
+  <br/>* Everyone takes Positive Consent training before matching.
+  <br/>* Unlimited free matches and you can see who likes you.
+  <br/>* The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  <br/>* We actually want to help you get into a better relationship.
+  </p>

@@ -23,13 +23,13 @@ rust-toolchain
 **/*.pem
 
 # Config files
-**/*.yaml
+# **/*.yaml
 
 # Allow docker-compose.yaml
 !docker-compose.yaml
 
 # Data
-**/*.csv
+# **/*.csv
 **/*.jpg
 **/*.png
 **/*.pdf
