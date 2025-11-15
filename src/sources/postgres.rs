@@ -39,7 +39,7 @@ impl ConnVars {
     pub fn from_env() -> Result<Self, anyhow::Error> {
         println!("Reading env vars ...");
 
-        let db_host = env::var("DB_HOST").context("Missing environment variable 'DB_URL'")?;
+        let db_host = env::var("DB_HOST").context("Missing environment variable 'DB_HOST'")?;
         let db_port = env::var("DB_PORT").context("Missing environment variable 'DB_PORT'")?;
         let db_user = env::var("DB_USER").context("Missing environment variable 'DB_USER'")?;
         let db_password = Password(

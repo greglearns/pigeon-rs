@@ -222,6 +222,8 @@ This is a test message (html)."#;
             "Test subject",
             "--content",
             "This is a test message (plaintext).",
+            "--connection",
+            "smtp",
         ];
         let app = app();
         let matches = app.get_matches_from(args);
@@ -254,6 +256,8 @@ This is a test message (html)."#;
             "./test_data/message.txt",
             "--html-file",
             "./test_data/message.html",
+            "--connection",
+            "smtp",
         ];
         let app = app();
         let matches = app.get_matches_from(args);
@@ -287,6 +291,8 @@ This is a test message (html)."#;
             "marie@curie.com",
             "--message-file",
             "./test_data/message.yaml",
+            "--connection",
+            "smtp",
         ];
         let app = app();
         let matches = app.get_matches_from(args);

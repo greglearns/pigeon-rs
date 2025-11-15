@@ -53,6 +53,11 @@ pub fn app() -> Command {
                         .num_args(1)
                         .required(true)
                         .help("Takes a sql query"),
+                    Arg::new(arg::DB_URL)
+                        .long(arg::DB_URL)
+                        .num_args(1)
+                        .required(false)
+                        .help("Database connection string e.g. 'test.db'"),
                     Arg::new(arg::SSH_TUNNEL)
                         .long(arg::SSH_TUNNEL)
                         .value_name("port")
@@ -279,6 +284,11 @@ pub fn app() -> Command {
                     display().help("Print emails to terminal"),
                     dry_run().help("Prepare emails but do not send emails"),
                     assume_yes().help("Send emails without confirmation"),
+                    Arg::new(arg::DB_URL)
+                        .long(arg::DB_URL)
+                        .num_args(1)
+                        .required(false)
+                        .help("Database connection string e.g. 'test.db'"),
                     Arg::new(arg::SSH_TUNNEL)
                         .long(arg::SSH_TUNNEL)
                         .value_name("port")
@@ -357,6 +367,8 @@ mod tests {
             "Test subject",
             "--content",
             "This is a test message (plaintext).",
+            "--connection",
+            "smtp",
         ];
         let app = app();
         let matches = app.get_matches_from(args);
@@ -395,6 +407,8 @@ mod tests {
             "./test_data/message.txt",
             "--html-file",
             "./test_data/message.html",
+            "--connection",
+            "smtp",
         ];
         let app = app();
         let matches = app.get_matches_from(args);
@@ -429,6 +443,8 @@ mod tests {
             "marie@curie.com",
             "--message-file",
             "./test_data/message.yaml",
+            "--connection",
+            "smtp",
         ];
         let app = app();
         let matches = app.get_matches_from(args);

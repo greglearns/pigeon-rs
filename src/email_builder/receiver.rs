@@ -41,20 +41,26 @@ impl BulkReceiver {
 
         match (receiver_query, receiver_path) {
             (Some(query), None) => {
-                let conn_vars = ConnVars::from_env()?;
-                let ssh_tunnel = matches.get_one::<String>(arg::SSH_TUNNEL).map(|arg| arg.as_ref());
-                let connection = DbConnection::new(&conn_vars, ssh_tunnel)?;
-                let df_receiver = sources::query_postgres(&connection, query)?;
+                let df_receiver = if let Some(db_url) = matches.get_one::<String>(arg::DB_URL) {
+                    // if db_url.starts_with("sqlite") {
+                        sources::query_sqlite(db_url, query)?
+                    // } else {
+                    //     return Err(anyhow!("Unsupported db url scheme in '{}'. Only 'sqlite://...' is supported with --db-url.", db_url));
+                    // }
+                } else {
+                    let conn_vars = ConnVars::from_env()?;
+                    let ssh_tunnel =
+                        matches.get_one::<String>(arg::SSH_TUNNEL).map(|arg| arg.as_ref());
+                    let connection = DbConnection::new(&conn_vars, ssh_tunnel)?;
+                    sources::query_postgres(&connection, query)?
+                };
 
                 if matches.get_flag(arg::DISPLAY) {
                     println!("Display query result: {}", df_receiver);
                 }
 
-                Ok(Self::new(
-                    column_name.to_owned() ,
-                    df_receiver,
-                ))
-            },
+                Ok(Self::new(column_name.to_owned(), df_receiver))
+            }
             (None, Some(path)) => {
                 let df_receiver = sources::read_csv(path)?;
 
@@ -150,6 +156,8 @@ mod tests {
             "./test_data/receiver.csv",
             "--message-file",
             "./test_data/message.yaml",
+            "--connection",
+            "smtp",
         ];
         let app = app();
         let matches = app.get_matches_from(args);
@@ -185,6 +193,8 @@ mod tests {
             "./test_data/message.yaml",
             "--receiver-column",
             "contact",
+            "--connection",
+            "smtp",
         ];
         let app = app();
         let matches = app.get_matches_from(args);

@@ -16,12 +16,20 @@ pub fn query(matches: &ArgMatches) -> Result<(), anyhow::Error> {
         match matches.get_one::<String>(cmd::QUERY) {
             Some(query) => {
                 let now = Utc::now();
-                let conn_vars = ConnVars::from_env()?;
-                let ssh_tunnel = matches
-                    .get_one::<String>(arg::SSH_TUNNEL)
-                    .map(|arg| arg.as_ref());
-                let connection = DbConnection::new(&conn_vars, ssh_tunnel)?;
-                let mut df_query = sources::query_postgres(&connection, query)?;
+                let mut df_query = if let Some(db_url) = matches.get_one::<String>(arg::DB_URL) {
+                    // if db_url.starts_with("sqlite") {
+                    sources::query_sqlite(db_url, query)?
+                    // } else {
+                    //     return Err(anyhow!("Unsupported db url scheme in '{}'. Only 'sqlite://...' is supported with --db-url.", db_url));
+                    // }
+                } else {
+                    let conn_vars = ConnVars::from_env()?;
+                    let ssh_tunnel = matches
+                        .get_one::<String>(arg::SSH_TUNNEL)
+                        .map(|arg| arg.as_ref());
+                    let connection = DbConnection::new(&conn_vars, ssh_tunnel)?;
+                    sources::query_postgres(&connection, query)?
+                };
 
                 if matches.get_flag(arg::DISPLAY) {
                     println!("Display query result: {}", df_query);

@@ -29,6 +29,7 @@ pub const IMAGE_COLUMN: &str = "image-column";
 pub const IMAGE_NAME: &str = "image-name";
 pub const SSH_TUNNEL: &str = "ssh-tunnel";
 pub const CONNECTION: &str = "connection";
+pub const DB_URL: &str = "db-url";
 
 // values for args
 pub mod val {

@@ -91,6 +91,8 @@ mod tests {
             "marie@curie.com",
             "--message-file",
             "./test_data/message.yaml",
+            "--connection",
+            "smtp",
             "--dry-run",
         ];
         let app = app();
