@@ -2,7 +2,7 @@ use super::{MockClient, SendEmail, SentEmail, SmtpClient};
 use crate::{
     arg::{self, val},
     email_builder::Email,
-    email_provider::AwsSesClient,
+    email_provider::{AwsSesClient, GoogleClient},
 };
 use anyhow::anyhow;
 use clap::ArgMatches;
@@ -12,6 +12,7 @@ use std::fmt;
 pub enum TransmissionType {
     Smtp,
     Aws,
+    Google,
     Dry,
 }
 
@@ -20,6 +21,7 @@ impl fmt::Display for TransmissionType {
         let request_method = match self {
             Self::Smtp => "smtp",
             Self::Aws => "aws",
+            Self::Google => "google",
             Self::Dry => "dry",
         };
 
@@ -57,6 +59,10 @@ impl<'a> Client<'a> {
             val::AWS => {
                 let client = AwsSesClient::new(matches)?;
                 Ok(Client::new(TransmissionType::Aws, Box::new(client)))
+            }
+            val::GOOGLE => {
+                let client = GoogleClient::new()?;
+                Ok(Client::new(TransmissionType::Google, Box::new(client)))
             }
             other => Err(anyhow!(format!(
                 "Value '{}' for argument '{}' not supported",

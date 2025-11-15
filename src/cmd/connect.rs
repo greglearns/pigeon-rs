@@ -1,7 +1,7 @@
 use crate::{
     arg::{self, val},
     cmd,
-    email_provider::AwsSesClient,
+    email_provider::{AwsSesClient, GoogleClient},
     email_transmission::SmtpClient,
 };
 use anyhow::{anyhow, Result};
@@ -21,6 +21,10 @@ pub fn connect(matches: &ArgMatches) -> Result<(), anyhow::Error> {
                 }
                 val::AWS => {
                     let _client = AwsSesClient::new(matches)?;
+                    Ok(())
+                }
+                val::GOOGLE => {
+                    let _client = GoogleClient::new()?;
                     Ok(())
                 }
                 other => Err(anyhow!(

@@ -379,6 +379,51 @@ pigeon send \
     --message-file "message.yaml"
 ```
 
+Using Google, you need to authenticate using OAuth 2.0. To do this, you need to set up a Google Cloud Project, enable the Gmail API, and generate credentials to obtain an OAuth token.
+
+1.  **Set up a Google Cloud Project**: If you don't have one, create a project in the [Google Cloud Console](https://console.cloud.google.com/).
+
+2.  **Enable Gmail API**: In your project, go to "APIs & Services" > "Library" and enable the "Gmail API".
+
+3.  **Configure OAuth Consent Screen**:
+    -   Go to "APIs & Services" > "OAuth consent screen".
+    -   If you are a Google Workspace user, you can select "Internal" as the User Type. This simplifies the setup and avoids the app verification process. Otherwise, choose "External".
+    -   You need to add the required scopes for sending emails. You can configure them at `https://console.cloud.google.com/auth/scopes?project=YOUR_PROJECT_NAME`. Make sure to add `.../auth/userinfo.email` and `.../auth/gmail.send`.
+
+4.  **Create Credentials**:
+    -   Go to "APIs & Services" > "Credentials".
+    -   Click "Create Credentials" and select "OAuth client ID".
+    -   Choose "Desktop app" for the application type.
+    -   Download the credentials JSON file. It's best to store it in a secure location, for example, a `private/` directory that is in your `.gitignore`. The file name will look something like `oauth2l_CREDENTIALS_FILE_NAME.apps.googleusercontent.com.json`.
+
+5.  **Get an OAuth Token**: You can use `oauth2l` (a command-line tool from Google) to fetch a token.
+    -   Install `oauth2l`: `go install github.com/google/oauth2l@latest`.
+    -   Run the `fetch` command with the required scopes and your credentials file:
+        ```bash
+        oauth2l fetch --scope userinfo.email --scope gmail.send --credentials private/oauth2l_CREDENTIALS_FILE_NAME.apps.googleusercontent.com.json
+        ```
+        This command will open a browser window for you to authorize access. After authorization, it will print the access token to your console.
+
+6.  **Set Environment Variable**: Set the `GOOGLE_OAUTH_TOKEN` environment variable with the access token you obtained.
+    ```bash
+    export GOOGLE_OAUTH_TOKEN="your-token-goes-here"
+    ```
+    For convenience, you can add this line to your `.env` file and source it.
+
+    ```bash
+    set -a && source .env && set +a
+    ```
+
+Now you can send emails via Google:
+
+``` rust
+pigeon send \
+    sender@your-domain.com \
+    receiver@gmail.com \
+    --connection google \
+    --message-file "message.yaml"
+```
+
 ### How to connect to postgres database
 
 For postgres, the database url is constructed as follows: `postgresql://db_user:db_password@db_host:db_port/db_name`.
@@ -415,6 +460,7 @@ In addition to the environment variables above, `SERVER_USER` and `SERVER_HOST` 
 ### Third-party APIs
 
 - AWS SES
+- Google Gmail
 
 ### Data sources
 

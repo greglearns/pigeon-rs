@@ -38,9 +38,9 @@ pub fn app() -> Command {
                 .args(&[
                     Arg::new(cmd::CONNECT)
                         .required(true)
-                        .value_parser([val::SMTP, val::AWS])
+                        .value_parser([val::SMTP, val::AWS, val::GOOGLE])
                         .default_value(val::SMTP)
-                        .help("Check connection to SMTP server."),
+                        .help("Check connection to SMTP server or email provider."),
                     verbose(),
                 ]),
         )
@@ -185,10 +185,9 @@ pub fn app() -> Command {
                     Arg::new(arg::CONNECTION)
                         .long(arg::CONNECTION)
                         .num_args(1)
-                        .required(false)
-                        .value_parser([val::SMTP, val::AWS])
-                        .default_value(val::SMTP)
-                        .help("Send emails via SMTP or AWS API"),
+                        .required(true)
+                        .value_parser([val::SMTP, val::AWS, val::GOOGLE])
+                        .help("Send emails via SMTP, AWS, or Google API"),
                     verbose(),
                 ]),
         )
@@ -289,10 +288,9 @@ pub fn app() -> Command {
                     Arg::new(arg::CONNECTION)
                         .long(arg::CONNECTION)
                         .num_args(1)
-                        .required(false)
-                        .value_parser([val::SMTP, val::AWS])
-                        .default_value(val::SMTP)
-                        .help("Send emails via SMTP or AWS API"),
+                        .required(true)
+                        .value_parser([val::SMTP, val::AWS, val::GOOGLE])
+                        .help("Send emails via SMTP, AWS, or Google API"),
                     verbose(),
                 ]),
         )

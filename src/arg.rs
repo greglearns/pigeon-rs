@@ -38,6 +38,7 @@ pub mod val {
     // possible values for argument CONNECTION and subcommand CONNECT
     pub const SMTP: &str = "smtp";
     pub const AWS: &str = "aws";
+    pub const GOOGLE: &str = "google";
 }
 
 pub fn value<'a>(name: &str, matches: &'a ArgMatches) -> Result<&'a str, anyhow::Error> {

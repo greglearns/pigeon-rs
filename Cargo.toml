@@ -41,8 +41,11 @@ lettre = { version = "0.11", default-features = false, features = ["builder", "p
 infer = "0.16"
 bytes = "1.6"
 base64 = "0.22"
+reqwest = { version = "0.12", features = ["json"] }
+serde_json = "1.0"
 
 [dev-dependencies]
 assert_cmd = "2.0.14"
+bacon = "3.20.1"
 predicates = "3.1.0"
 tempfile = "3.10.1"
