@@ -1,0 +1,30 @@
+# Personalize {first_name}
+
+subject: "Find Your Dime: you have new matches!"
+text: |
+  {name},
+
+  You have new matches waiting for you at www.FindYourDime.com!
+
+  Why FindYourDime?
+  * Everyone takes Positive Consent training before matching.
+  * Unlimited free matches and you can see who likes you.
+  * The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  * We actually want to help you get into a better relationship.
+
+html: |
+  <p>
+  {name},
+  </p>
+
+  <p>
+  You have new matches waiting for you at www.FindYourDime.com!
+  </p>
+
+  <p>
+  Why FindYourDime?
+  <br/>* Everyone takes Positive Consent training before matching.
+  <br/>* Unlimited free matches and you can see who likes you.
+  <br/>* The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  <br/>* We actually want to help you get into a better relationship.
+  </p>
