@@ -1,0 +1,77 @@
+# Personalize {first_name}
+
+subject: "Find Your Dime: new chat feature to help you: 1st meeting checklist"
+text: |
+  {name},
+
+  Have you seen the "1st meeting checklist" button on the chat screen?
+
+  It's designed to reduce ghosting and make it easier (and more successful) to meet in person.
+
+  Did you know that 60-90% of chats on dating apps don't go anywhere and just ... fizzle out, with no one feeling happy or meeting.
+
+  Here's what we recommend:
+  1. Check out what we put together for the "1st meeting checklist" on the chat page.
+  2. Let us know what you think, and if there is anything you wish that was better.
+  3. Message the person you're chatting with that you've read it and agree to it (so that they can feel more comfortable, which can increase the chance of meeting), and/or discuss it with them.
+  4. Lots of people like to discuss some plans for what you will talk about and do when you meet. This is an actual good use of chatting before meeting.
+  5. Practice Positive Consent -- Recommend a day, time, and a (safe, public) location where you two can meet. Some people like last minute plans (want to get together tomorrow?) but lots of people prefer planning days or a week in advance, so you likely want to suggest multiple days and times and not wait until the last minute.
+  6. Remember Positive Consent and Anger Reduction: if it doesn't work out, be okay with that. There will be other opportunities with other people.
+  7. Let us know how it goes (good or bad).
+
+  No other dating site provides this (that we're aware of), so would love love love to get your feedback on it so that we can fix it and/or make it better.
+
+  Best wishes!
+  – Greg  
+  www.FindYourDime.com
+
+  Why Find Your Dime?
+  * Everyone takes Positive Consent training before matching.
+  * Unlimited free matches and you can see who likes you.
+  * The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  * We actually want to help you get into a better relationship.
+
+html: |
+  <p>
+  {name},
+  </p>
+
+  <p>
+  Have you seen the "1st meeting checklist" button on the chat screen?
+  </p>
+
+  <p>
+  It's designed to reduce ghosting and make it easier (and more successful) to meet in person.
+  </p>
+
+  <p>
+  Did you know that 60-90% of chats on dating apps don't go anywhere and just ... fizzle out, with no one feeling happy or meeting.
+  </p>
+
+  <p>
+  Here's what we recommend:
+  <br/>1. Check out what we put together for the "1st meeting checklist" on the chat page.
+  <br/>2. Let us know what you think, and if there is anything you wish that was better.
+  <br/>3. Message the person you're chatting with that you've read it and agree to it (so that they can feel more comfortable, which can increase the chance of meeting), and/or discuss it with them.
+  <br/>4. Lots of people like to discuss some plans for what you will talk about and do when you meet. This is an actual good use of chatting before meeting.
+  <br/>5. Practice Positive Consent &mdash; Recommend a day, time, and a (safe, public) location where you two can meet. Some people like last minute plans (want to get together tomorrow?) but lots of people prefer planning days or a week in advance, so you likely want to suggest multiple days and times and not wait until the last minute.
+  <br/>6. Remember Positive Consent and Anger Reduction: if it doesn't work out, be okay with that. There will be other opportunities with other people.
+  <br/>7. Let us know how it goes (good or bad).
+  </p>
+
+  <p>
+  No other dating site provides this (that we're aware of), so would love love love to get your feedback on it so that we can fix it and/or make it better.
+  </p>
+
+  <p>
+  – Greg  
+  <br/>www.FindYourDime.com
+  </p>
+
+  <p>
+  Why Find Your Dime?
+  <br/>* Everyone takes Positive Consent training before matching.
+  <br/>* Unlimited free matches and you can see who likes you.
+  <br/>* The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  <br/>* We actually want to help you get into a better relationship.
+  </p>

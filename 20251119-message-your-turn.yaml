@@ -1,0 +1,48 @@
+subject: "Find Your Dime: it's your turn to respond in a chat"
+text: |
+  {name},
+
+  It's your turn to respond in a chat! (gentle nudge)
+
+  You can respond @ www.FindYourDime.com
+
+  If you aren't interested in continuing, please move the conversation to "M (maybe)" or "N (no)" so that the person isn't left hanging. In addition to being nice, it also keeps you safer by not leaving someone hanging who could then say things that they (or you) might regret!
+
+  – Greg  
+  FindYourDime.com
+
+  Why Find Your Dime?
+  * Everyone takes Positive Consent training before matching.
+  * Unlimited free matches and you can see who likes you.
+  * The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  * We actually want to help you get into a better relationship.
+
+html: |
+  <p>
+  {name},
+  </p>
+
+  <p>
+  It's your turn to respond in a chat! (gentle nudge)
+  </p>
+
+  <p>
+  You can respond @ www.FindYourDime.com
+  </p>
+
+  <p>
+  If you aren't interested in continuing, please move the conversation to "M (maybe)" or "N (no)" so that the person isn't left hanging. In addition to being nice, it also keeps you safer by not leaving someone hanging who could then say things that they (or you) might regret!
+  </p>
+
+  <p>
+  – Greg  
+  <br/>FindYourDime.com
+  </p>
+
+  <p>
+  Why Find Your Dime?
+  <br/>* Everyone takes Positive Consent training before matching.
+  <br/>* Unlimited free matches and you can see who likes you.
+  <br/>* The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  <br/>* We actually want to help you get into a better relationship.
+  </p>

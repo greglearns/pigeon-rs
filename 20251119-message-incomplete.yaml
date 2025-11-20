@@ -1,0 +1,52 @@
+# Personalize {first_name}
+
+subject: "Find Your Dime: your profile is ALMOST complete... but not quite"
+text: |
+  {name},
+
+  Wanted to make sure you knew that your profile is ALMOST complete, but isn't quite finished. As a result, you aren't matching with anyone.
+
+  You can complete your profile at https://www.FindYourDime.com.
+
+  If you gave up on your profile, we'd love to know why (we hope you're willing to share, especially if it is negative) so that we can fix the platform and make it better.
+
+  Best wishes!
+  – Greg
+  www.FindYourDime.com
+
+  Why Find Your Dime?
+  * Everyone takes Positive Consent training before matching.
+  * Unlimited free matches and you can see who likes you.
+  * The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  * We actually want to help you get into a better relationship.
+
+html: |
+  <p>
+  {name},
+  </p>
+
+  <p>
+  Wanted to make sure you knew that your profile is ALMOST complete, but isn't quite finished. As a result, you aren't matching with anyone.
+  </p>
+
+  <p>
+  You can complete your profile at https://www.FindYourDime.com.
+  </p>
+
+  <p>
+  If you gave up on your profile, we'd love to know why (we hope you're willing to share, especially if it is negative) so that we can fix the platform and make it better.
+  </p>
+
+  <p>
+  Best wishes!
+  <br/>– Greg
+  <br/>www.FindYourDime.com
+  </p>
+
+  <p>
+  Why Find Your Dime?
+  <br/>* Everyone takes Positive Consent training before matching.
+  <br/>* Unlimited free matches and you can see who likes you.
+  <br/>* The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  <br/>* We actually want to help you get into a better relationship.
+  </p>
