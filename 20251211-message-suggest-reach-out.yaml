@@ -1,0 +1,57 @@
+# Personalize {first_name}
+
+subject: "Find Your Dime: maybe ask them to meet since you've been chatting?"
+text: |
+  {name},
+
+  1. It's getting to the end of the semester. You've been chatting on the app, so why not ask them to meet in a safe place?
+
+  2. If you're waiting for them to ask you to meet... don't. Showing initiative is a good thing.
+
+  3. We highly recommend that you check out the "1st meeting checklist" button on the chat screen. Read it, and then tell the person you've read it (it will make them more comfortable), and ask them if they'd like to meet at the Crossroads. And practice Positive Consent: recommend a day, time, and a (safe, public) location where you two can meet. Some people like last minute plans (want to get together tomorrow?) but lots of people prefer planning days or a week in advance, so offer both if you're comfortable with both options.
+
+  Best wishes!
+  – Greg  
+  www.FindYourDime.com
+
+  P.S. No other dating site provides a checklist like this in chat, so would love to get your feedback on it so that we can make it better.
+
+  Why Find Your Dime?
+  * Everyone takes Positive Consent training before matching.
+  * Unlimited free matches and you can see who likes you.
+  * The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  * We actually want to help you get into a better relationship.
+
+html: |
+  <p>
+  {name},
+  </p>
+
+  <p>
+  1. It's getting to the end of the semester. You've been chatting on the app, so why not ask them to meet in a safe place?
+  </p>
+
+  <p>
+  2. If you're waiting for them to ask you to meet... don't. Showing initiative is a good thing.
+  </p>
+
+  <p>
+  3. We highly recommend that you check out the "1st meeting checklist" button on the chat screen. Read it, and then tell the person you've read it (it will make them more comfortable), and ask them if they'd like to meet at the Crossroads. And practice Positive Consent: recommend a day, time, and a (safe, public) location where you two can meet. Some people like last minute plans (want to get together tomorrow?) but lots of people prefer planning days or a week in advance, so offer both if you're comfortable with both options.
+  </p>
+
+  <p>
+  – Greg  
+  <br/>www.FindYourDime.com
+  </p>
+
+  <p>
+  P.S. No other dating site provides a checklist like this in chat, so would love to get your feedback on it so that we can make it better.
+  </p>
+
+  <p>
+  Why Find Your Dime?
+  <br/>* Everyone takes Positive Consent training before matching.
+  <br/>* Unlimited free matches and you can see who likes you.
+  <br/>* The site helps you move beyond swipe/chat to actually meet, and is less shallow.
+  <br/>* We actually want to help you get into a better relationship.
+  </p>
